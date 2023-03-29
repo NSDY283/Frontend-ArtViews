@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.containerVideo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.containerText{
+    margin-top: 5rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text1{
+    width: 70%;
+    color: #000000;
+    font-weight: bold;
+    font-size: 2.0rem;
+}
+
+.text2{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
