@@ -9,11 +9,12 @@ export const FormSingE = () => {
         email: "",
         name: "",
         password: "",
+        rol: "2",
     })
     const [message, setMessage]=useState();
     const [loading, setLoading]=useState(false);
     
-    const {email,name,password}= inputs;
+    const {email,name,password, rol}= inputs;
     
     const onChange = (e)=> {
         setInputs({ ...inputs, [e.target.name]: e.target.value})
@@ -21,18 +22,19 @@ export const FormSingE = () => {
     
     const onSubmit = async (e) => {
         e.preventDefault()
-        if (name !== '' && email !== '' && password !== ''){
+        if (name !== '' && email !== '' && password !== ''&& rol !== ''){
             const UsuarioE = {
                 name, 
                 email,
                 password,
+                rol,
             }
             setLoading (true)
             await axios
             .post('http://localhost:5000/api/userE/registerUserE', UsuarioE)
             .then (({data}) => {
                 setMessage(data.message);
-                setInputs({email: "",name: "",password: "",});
+                setInputs({email: "",name: "",password: "",rol: "2",});
                 setTimeout(()=>{
                     setMessage('')
                     navigate('/login')
