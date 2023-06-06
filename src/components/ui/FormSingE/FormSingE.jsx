@@ -9,12 +9,11 @@ export const FormSingE = () => {
         email: "",
         name: "",
         password: "",
-        rol: "2",
     })
     const [message, setMessage]=useState();
     const [loading, setLoading]=useState(false);
     
-    const {email,name,password, rol}= inputs;
+    const {email,name,password}= inputs;
     
     const onChange = (e)=> {
         setInputs({ ...inputs, [e.target.name]: e.target.value})
@@ -22,19 +21,18 @@ export const FormSingE = () => {
     
     const onSubmit = async (e) => {
         e.preventDefault()
-        if (name !== '' && email !== '' && password !== ''&& rol !== ''){
+        if (name !== '' && email !== '' && password !== ''){
             const UsuarioE = {
                 name, 
                 email,
                 password,
-                rol,
             }
             setLoading (true)
             await axios
             .post('http://localhost:5000/api/userE/registerUserE', UsuarioE)
             .then (({data}) => {
                 setMessage(data.message);
-                setInputs({email: "",name: "",password: "",rol: "2",});
+                setInputs({email: "",name: "",password: "",});
                 setTimeout(()=>{
                     setMessage('')
                     navigate('/login')
@@ -71,7 +69,7 @@ export const FormSingE = () => {
             <input onChange={(e) => onChange(e)} placeholder='Correo' name='email' type='email' id='emailSingE' required />
 
             <div className="containerbuttonSingE">
-                <button className='btnSendSingE' onSubmit={() => alert('funciona')}><span></span><p className="subPSingE">Ingresar</p></button>
+                <button className='btnSendSingE' onSubmit={() => alert('funciona')}><span></span><p className="subPSingE">{loading ? 'Cargando...' : 'Ingresar'}</p></button>
             </div>
         </form>
     </div>

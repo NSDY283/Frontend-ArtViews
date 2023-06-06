@@ -8,7 +8,7 @@ import { SingUPE } from "./components/pages/SingUPE/SingUPE.jsx";
 import { WelcomeEmp } from "./components/pages/WelcomeEmprendedor/WelcomeEmp.jsx";
 import { Welcome } from "./components/pages/Welcome/welcome.jsx";
 import { MyProfile } from "./components/pages/MyProfile/MyProfile"
-import { MyProfileEmp } from "./components/pages/MyProfileEmp/MyProfileEmp"
+import { MyProfileEmp } from "./components/pages/MyProfileEmp/MyProfileEmp.jsx"
 window.addEventListener('DOMContentLoaded',App)
 
 function App() {

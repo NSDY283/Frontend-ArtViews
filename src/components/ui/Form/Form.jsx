@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import {  useNavigate } from 'react-router-dom'
-import { ValidationU, ValidationE } from './ValidationU'
-// import { useSelector } from 'react-redux'
 
 export const Form = () => {
     const [inputs, setInputs] = useState({
@@ -12,11 +10,6 @@ export const Form = () => {
         password: ""
     });
 
-    // const {user} = useSelector(
-    //     (state) => state.auth
-    // )
-
-    // const [message, setMessage]=useState();
     const [loading, setLoading]=useState(false);
     
     const navigate = useNavigate();
@@ -61,9 +54,10 @@ export const Form = () => {
             }else if (typerole === '4') {
                 const responseE = await axios.post("http://localhost:5000/api/userE/loginE", Usuario)
                 localStorage.setItem("name",  JSON.stringify(responseE.data.name));
+                localStorage.setItem("email",  JSON.stringify(responseE.data.email));
                 navigate('/WelcomeEmp');
             }
-            // correct()
+
         }catch (error) {
             console.error(error)
         };
