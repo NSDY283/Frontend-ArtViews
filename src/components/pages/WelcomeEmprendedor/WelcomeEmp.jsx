@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import '../Welcome/welcome.css'
 import { Left } from '../../layouts/Left/Left';
 import { Center } from '../../layouts/Center/Center'
@@ -13,7 +13,7 @@ export const WelcomeEmp = () => {
   
   // const {user} = useSelector((state) => state.auth)
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   // const token =  JSON.parse(localStorage.getItem("token"));
   const name =  JSON.parse(localStorage.getItem("name"));

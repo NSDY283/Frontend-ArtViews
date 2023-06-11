@@ -7,7 +7,7 @@ export const NavBarLateral = () => {
         <img className="Logo" src="https://res.cloudinary.com/dwj1w03r9/image/upload/v1678999625/artViews/Black_Blush_Elegant_Luxury_Name_Initial_Typography_Photography_Logo_1_czjzbt.png" alt="" />
         <ul className='ulHome2'>
             <div className="animation">
-                <Link className='anchor2' to="/">Inicio</Link>
+                <Link className='anchor2' to="/WelcomeEmp">Inicio</Link>
             </div>
             <div className="animation">
                 <Link className='anchor2' to="/Explorar">Explorar</Link>

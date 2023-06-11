@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
+import { Products } from '../../ui/Products/Products'
 import {  useNavigate } from 'react-router-dom'
-
 export const MyProfileEmp = () => {
     // const email1 =  JSON.parse(localStorage.getItem("email"));
     const [inputs, setInputs] = useState({
@@ -51,8 +51,8 @@ export const MyProfileEmp = () => {
                 setInputs({nameP: "",img: "",category: "",price: 0,cant: 0,description: "",});
                 setTimeout(()=>{
                     setMessage('')
-                    navigate('/WelcomeEmp')
-                    setLoading(false)
+                    navigate('/MyProfileEmp')
+                    setLoading(false)                
                 },1500)
             })
             .catch((error)=>{
@@ -67,6 +67,26 @@ export const MyProfileEmp = () => {
     };
     
     const navigate = useNavigate();
+
+    // const getP = async()=>{
+    //     const Product = {
+    //         // email,
+    //         nameP,
+    //         img,
+    //         price,
+    //         description,
+    //     }
+
+    //     // const [img1, setImg] = useState()
+    //     // const [nameP1, setName] = useState()
+    //     // const [price1, setPrice] = useState()
+    //     // const [description1, setDescription] = useState()
+    //     const [messag1e, setMessag1e]=useState();
+
+    //     const response = await axios.get("http://localhost:5000/api/product/getProduct", Product)
+    //     console.log(response.data.map ((element)=>{console.log(element.nameP)}))
+    
+    // }
 
   return (
     <div className="formSingE">
@@ -89,6 +109,13 @@ export const MyProfileEmp = () => {
                 <button onSubmit={() => alert('funciona')}><span></span><p className="subPSingE">{loading ? 'Cargando...' : 'Ingresar'}</p></button>
             </div>
         </form>
+
+        <div className="containerProducts" >
+            <h1>s</h1>
+            <h1>d</h1>
+            <Products/>
+        </div>
+
     </div>
   )
 }
