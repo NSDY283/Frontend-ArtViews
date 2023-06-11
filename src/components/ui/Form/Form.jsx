@@ -47,11 +47,21 @@ export const Form = () => {
         try {
             
             
-            if(typerole === '3'){
+            if(typerole === '8'){
                 const response = await axios.post("http://localhost:5000/api/users/login", Usuario)
                 localStorage.setItem("name",  JSON.stringify(response.data.name));
                 navigate('/Welcome');
-            }else if (typerole === '4') {
+            }else if (typerole === '9') {
+                const responseE = await axios.post("http://localhost:5000/api/userE/loginE", Usuario)
+                localStorage.setItem("name",  JSON.stringify(responseE.data.name));
+                localStorage.setItem("email",  JSON.stringify(responseE.data.email));
+                navigate('/WelcomeEmp');
+            }else if (typerole === 'b') {
+                const responseE = await axios.post("http://localhost:5000/api/userE/loginE", Usuario)
+                localStorage.setItem("name",  JSON.stringify(responseE.data.name));
+                localStorage.setItem("email",  JSON.stringify(responseE.data.email));
+                navigate('/WelcomeEmp');
+            }else if (typerole === 'a') {
                 const responseE = await axios.post("http://localhost:5000/api/userE/loginE", Usuario)
                 localStorage.setItem("name",  JSON.stringify(responseE.data.name));
                 localStorage.setItem("email",  JSON.stringify(responseE.data.email));

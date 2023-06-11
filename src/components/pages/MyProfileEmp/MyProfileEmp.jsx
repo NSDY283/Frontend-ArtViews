@@ -111,8 +111,6 @@ export const MyProfileEmp = () => {
         </form>
 
         <div className="containerProducts" >
-            <h1>s</h1>
-            <h1>d</h1>
             <Products/>
         </div>
 

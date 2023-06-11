@@ -33,23 +33,30 @@ export const Products = () => {
   // }
 
   
-    const [products, setProducts] = useState([])
-    useEffect (() =>{
-      axios.get("http://localhost:5000/api/product/getProduct")
-      .then(products => {
-        setProducts(products.data)})
-      .catch(err => console.log(err))
-      }, [])
-      
-      
-      return (
-        <div>
-      {
-        products.map(pro => {
-          console.log (pro.nameP)
-          // <h1 className='nameProduct'>{pro.nameP}</h1>
-        })
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/product/getProduct");
+        const productsData = response.data;
+        setProducts(productsData);
+        console.log(productsData);
+      } catch (error) {
+        console.log(error);
       }
+    };
+  
+    getProducts();
+    console.log(products);
+  }, []);
+  
+  return (
+    <div>
+      {products.map((product) => (
+        // cardproduct
+        // title = 
+        <h1 className='nameProduct'>{product?.nameP}</h1>
+      ))}
     </div>
-  )
-}
+  );}
