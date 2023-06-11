@@ -68,26 +68,6 @@ export const MyProfileEmp = () => {
     
     const navigate = useNavigate();
 
-    // const getP = async()=>{
-    //     const Product = {
-    //         // email,
-    //         nameP,
-    //         img,
-    //         price,
-    //         description,
-    //     }
-
-    //     // const [img1, setImg] = useState()
-    //     // const [nameP1, setName] = useState()
-    //     // const [price1, setPrice] = useState()
-    //     // const [description1, setDescription] = useState()
-    //     const [messag1e, setMessag1e]=useState();
-
-    //     const response = await axios.get("http://localhost:5000/api/product/getProduct", Product)
-    //     console.log(response.data.map ((element)=>{console.log(element.nameP)}))
-    
-    // }
-
   return (
     <div className="formSingE">
         <form action='' className="form2SingE" onSubmit={(e) => onSubmit(e)}>
@@ -110,7 +90,7 @@ export const MyProfileEmp = () => {
             </div>
         </form>
 
-        <div className="containerProducts" >
+        <div>
             <Products/>
         </div>
 
