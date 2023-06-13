@@ -50,6 +50,7 @@ export const Form = () => {
             if(typerole === '8'){
                 const response = await axios.post("http://localhost:5000/api/users/login", Usuario)
                 localStorage.setItem("name",  JSON.stringify(response.data.name));
+                localStorage.setItem("idUser",  JSON.stringify(response.data._id));
                 navigate('/Welcome');
             }else if (typerole === '9') {
                 const responseE = await axios.post("http://localhost:5000/api/userE/loginE", Usuario)

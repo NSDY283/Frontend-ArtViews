@@ -10,10 +10,10 @@ export const NavBarLateral = () => {
                 <Link className='anchor2' to="/WelcomeEmp">Inicio</Link>
             </div>
             <div className="animation">
-                <Link className='anchor2' to="/Explorar">Explorar</Link>
+                <Link className='anchor2' to="/ProductsEmp">Mis Productos</Link>
             </div>
             <div className="animation">
-                <Link className='anchor2' to="/Categorias">Categorias</Link>
+                <Link className='anchor2' to="/Marketplace">Marketplace</Link>
             </div>
         </ul>
         <div className='container2'>

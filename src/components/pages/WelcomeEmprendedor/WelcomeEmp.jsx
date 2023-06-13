@@ -4,8 +4,6 @@ import '../Welcome/welcome.css'
 import { Left } from '../../layouts/Left/Left';
 import { Center } from '../../layouts/Center/Center'
 import { RightEmp } from '../../layouts/RightEmp/RightEmp'
-import axios from 'axios'
-import { useSelector } from 'react-redux'
 
 
 export const WelcomeEmp = () => {

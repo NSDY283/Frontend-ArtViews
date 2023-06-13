@@ -25,7 +25,7 @@ export const Products = () => {
   return (
     <div>
       {products.map((product) => {
-        return <CreateCard img={product.img} name={product.nameP} price={product.price} desciption={product.description} />
+        return <CreateCard id={product._id} img={product.img} name={product.nameP} price={product.price} desciption={product.description} category={product.category} cant={product.cant}/>
         })}
     </div>
   );}

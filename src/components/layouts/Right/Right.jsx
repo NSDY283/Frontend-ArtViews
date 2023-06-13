@@ -20,7 +20,7 @@ export const Right = () => {
                 <img className='imgPerfil' src="https://res.cloudinary.com/divor1sn5/image/upload/v1684162588/Generales/Black_Blush_Elegant_Luxury_Name_Initial_Typography_Photography_Logo_1_dokjns.png" alt="" />
               </a>
               <ul>
-                <li><Link className='anchorProfile' to="/MyProfile">Mi Perfil</Link></li>
+                <li><Link className='anchorProfile' to="/MyprofileU">Mi Perfil</Link></li>
                 <li><Link className='anchorProfile' to="/">Cerrar Sesión</Link></li>
               </ul>
               </li>

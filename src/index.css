@@ -27,7 +27,10 @@ body {
 
 .containerProducts{
   width: 200px;
-  height: 200px;
   background-color:#2A9D8F;
   margin-top: 50px;
+}
+
+.imgProduct{
+  width: 50%;
 }
