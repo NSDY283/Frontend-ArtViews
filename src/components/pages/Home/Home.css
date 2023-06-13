@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+    /* overflow-x: hidden; */
+}
+
+.contentp1Home{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22rem;
+    margin-top: 5rem;
+    overflow: hidden;
+}
+
+.p1Home{
+    width: 35%;
+    text-align: center;
+    font-size: 2.1rem;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+}
+
+.ContainerValues{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14rem;
+    overflow: hidden;
+}
+
+.img1CV{
+    width: 15%;
+    transition: .4s;
+    overflow: hidden;
+}
+
+.img2CV{
+    width: 17%;
+    transition: .4s;
+}
+
+.img1CV:hover{
+    transform: scale(1.1);
+}
+
+.img2CV:hover{
+    transform: scale(1.1);
+}
+
+.Container2Home{
+    width: 100vw;
+    height: 43rem;
+    margin-top: 14rem;
+    background-color: #E76F51;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ContainerTextHome{
+    width: 50%;
+    height: 100%;
+    color: #FFFFFF;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.ContainerTextHome > h2{
+    width: 70%;
+    text-align: right ;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.ContainerTextHome > p{
+    width: 65%;
+    text-align: right ;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.ContainerImghome{
+    width: 50%;
+    height: 100%;
+    color: #FFFFFF;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.imageBack{
+    height: 60%;
+    width: 50%;
+    margin-left: 5rem;
+    background: url(https://res.cloudinary.com/dwj1w03r9/image/upload/v1680125522/s2_t4bvn7.webp);
+}
+
+.ContainerPlane{
+    width: 100vw;
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: url(https://res.cloudinary.com/dwj1w03r9/image/upload/v1680126273/Bienvenido_Nuevamente_z6aoyf.jpg);
+    overflow: hidden;
+}
+
+.plane1{
+    width: 20%;
+    height: 57%;
+    background-color: #2A9D8F;
+    border-radius: 4rem;
+    transition: .4s;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.plane1:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.plane2{
+    width: 20%;
+    height: 57%;
+    background-color: #F4A261;
+    border-radius: 4rem;
+    transition: .4s;transition: .4s;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.plane2:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.p1CP{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.p2CP{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.8rem;
+    overflow: hidden;
+}
+
+.p3CP{
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    overflow: hidden;
+}
+
+.p4CP{
+    width: 80%;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.btnCP{
+    width: 50%;
+    height: 10%;
+    background-color: #FFFFFF;
+    color: #2A9D8F;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.btnCP2{
+    width: 50%;
+    height: 10%;
+    background-color: #FFFFFF;
+    color: #F4A261;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.footerHome{
+    width: 100vw;
+    height: 12rem;
+    border-top: solid 4px #c7c7c7;
+    overflow: hidden;
+}
