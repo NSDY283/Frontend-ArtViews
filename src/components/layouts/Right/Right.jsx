@@ -39,7 +39,7 @@ export const Right = () => {
         <p className="exp">¿Que esperas para hacerlo?</p>
       </div>
 
-      <p className='notifications'>Notificaciones</p>
+      <p className='notifications'>Art Views</p>
       <div className="not">
         <p>{name} Tienes una recomendacion nueva</p>
         <p>Nuevos productos para explorar</p>
