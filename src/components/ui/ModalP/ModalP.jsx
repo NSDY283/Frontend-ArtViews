@@ -44,7 +44,7 @@ export const ModalP = ({estado, cambiarEstado, props}) => {
             console.log(Product);
             setLoading (true)
             await axios
-            .post('http://localhost:5000/api/product/registerProduct', Product)
+            .post('https://backend-artviews.onrender.com/api/product/registerProduct', Product)
             .then (({data}) => {
                 setMessage(data.message);
                 // setInputs({email: `${email1}`,nameP: "",img: "",category: "",price: 0,cant: 0,description: "",});

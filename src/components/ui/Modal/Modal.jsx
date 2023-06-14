@@ -39,7 +39,7 @@ export const Modal = ({estado, cambiarEstado}) => {
       setLoading(true);
     
       try {
-          const response = await axios.put(`http://localhost:5000/api/users/client/${id}`, UserE);
+          const response = await axios.put(`https://backend-artviews.onrender.com/api/users/client/${id}`, UserE);
           setInputs({
               nameP: "",
               email: "",

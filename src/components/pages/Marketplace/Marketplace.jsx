@@ -15,7 +15,7 @@ export const Marketplace = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/product/getProduct");
+        const response = await axios.get("https://backend-artviews.onrender.com/api/product/getProduct");
         const productsData = response.data;
         setProducts(productsData);
         console.log(productsData);

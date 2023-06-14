@@ -11,6 +11,7 @@ import { Marketplace } from "./components/pages/Marketplace/Marketplace.jsx"
 import { ProductsEmp } from "./components/pages/ProductsEmp/ProductsEmp.jsx"
 import { MyProfileU } from "./components/pages/MyProfileU/MyProfileU.jsx"
 import { MyProfileE } from "./components/pages/MyProfileE/MyProfileE.jsx"
+import { WelcomeVenture } from "./components/pages/WelcomeVenture/WelcomeVenture.jsx";
 window.addEventListener('DOMContentLoaded',App)
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/ProductsEmp' element={<ProductsEmp/>}></Route>
           <Route path='/MyprofileU' element={<MyProfileU/>}></Route>
           <Route path='/MyprofileE' element={<MyProfileE/>}></Route>
+          <Route path='/WelcomeVenture' element={<WelcomeVenture/>}></Route>
       </Routes>
     </div>
 

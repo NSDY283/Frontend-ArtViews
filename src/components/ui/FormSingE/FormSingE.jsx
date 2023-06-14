@@ -29,7 +29,7 @@ export const FormSingE = () => {
             }
             setLoading (true)
             await axios
-            .post('http://localhost:5000/api/userE/registerUserE', UsuarioE)
+            .post('https://backend-artviews.onrender.com/api/userE/registerUserE', UsuarioE)
             .then (({data}) => {
                 setMessage(data.message);
                 setInputs({email: "",name: "",password: "",});

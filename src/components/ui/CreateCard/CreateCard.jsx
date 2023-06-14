@@ -46,7 +46,7 @@ const onSubmit = async (e, id) => {
   setLoading(true);
 
   try {
-      const response = await axios.put(`http://localhost:5000/api/product/${id}`, Product);
+      const response = await axios.put(`https://backend-artviews.onrender.com/api/product/${id}`, Product);
       setInputs({
           nameP: "",
           img: "",
@@ -74,7 +74,7 @@ const onSubmit = async (e, id) => {
   const deleteProduct = async (id) => {
     try {
         console.log(id)
-        await axios.delete("http://localhost:5000/api/product/"+id);
+        await axios.delete("https://backend-artviews.onrender.com/api/product/"+id);
         window.location.reload(true);
     } catch (error) {
       console.log(error);
