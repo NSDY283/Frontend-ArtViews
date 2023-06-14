@@ -39,7 +39,7 @@ export const RightEmp = () => {
         <p className="exp">Valido hasta 12/09/2023</p>
       </div>
 
-      <p className='notifications'>Notificaciones</p>
+      <p className='notifications'>Art Views</p>
       <div className="not">
         <p>{name} Tienes una recomendacion nueva</p>
         <p>Nuevos productos para explorar</p>
