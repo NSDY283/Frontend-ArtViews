@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+.Footer{
+    width: 100vw;
+    height: 620px;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container1Footer{
+    width: 80%;
+    height: 30%;
+    border-bottom: solid 3px #b9bbbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.part1Footer{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.part2Footer{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.part3Footer{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.part4Footer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+.part5Footer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.part5Footer > p{
+    font-size: 20px;
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.part4Footer > p{
+    font-size: 20px;
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.part3Footer > img{
+    width: 8%;
+    margin-bottom: 50px;
+}
+
+.anchorF{
+    font-size: 23px;
+    text-decoration: none;
+    color: black;
+}
+
+.container2Footer{
+    width: 80%;
+    height: 20%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

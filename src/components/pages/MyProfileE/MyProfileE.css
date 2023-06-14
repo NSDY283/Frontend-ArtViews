@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+.profileE{
+    width: 100vw;
+    height: 100vh;
+    background: url(https://res.cloudinary.com/divor1sn5/image/upload/v1686634665/Bienvenido_Nuevamente_1_bncqo9.jpg);
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.ContainerProfileE1{
+    width: 100vw;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.imgProfileE{
+    width: 28%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 2rem #ffffff;
+}
+
+.ContainerProfileE2{
+    width: 100vw;
+    height: 28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerE2-1{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 15px;
+}
+
+
+
+.containerE2-0{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 20px;
+    gap: 20px;
+
+}
+
+.containerE2-0  > p{
+    font-size: 22px;
+}
+
+.btnActuE{
+    width: 47%;
+    height: 25%;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #2A9D8F;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btnActuE:hover{
+    background-color: #1f766c;
+}
+
+.desplegableE{
+    width: 11.5%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A9D8F;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .2s;
+    background-size:contain ;
+}
+
+.desplegableE > img{
+    width: 35%;
+}
+
+.anchorProfileE{
+    position: absolute;
+    left: 80px;
+    top: 35px;
+}
+
+.anchorProfileE > img{
+    width: 12%;
+}
