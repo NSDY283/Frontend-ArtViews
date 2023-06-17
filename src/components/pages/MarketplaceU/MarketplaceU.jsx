@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { CreateCardUsCli } from '../../ui/CreateCard/CreateCardUsCli'
 import { Left } from '../../layouts/Left/Left';
+import swal from 'sweetalert'
 
 export const MarketplaceU = (estado, cambiarEstado) => {
 
@@ -87,7 +88,7 @@ export const MarketplaceU = (estado, cambiarEstado) => {
               return (
               <div className='CreateCardUsCli2'>
               <CreateCardUsCli img={product.img} name={product.nameP} price={product.price} desciption={product.description} />
-              <button className="btnComprar"onClick={() => onAddproduct(product)}>+</button>
+              <button className="btnComprar" onClick={() => onAddproduct(product)}>+</button>
               </div>
               )})}
           </div>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Products } from '../../ui/Products/Products'
 import {  useNavigate } from 'react-router-dom'
 import { LeftE } from '../../layouts/LeftE/LeftE'
+import swal from 'sweetalert'
 
 export const ProductsEmp = () => {
     // const email1 =  JSON.parse(localStorage.getItem("email"));
@@ -56,6 +57,15 @@ export const ProductsEmp = () => {
                     setLoading(false)                
                     window.location.reload(true);
                 },1500)
+                swal({
+                    title: "Producto Creado",
+                    icon: "success",
+                    timer: "1500",
+                    buttons: false
+                    // icon: "warning" error naranja
+                    // icon: "info" error sin color 
+                    // icon: "error" error con una x 
+                  })
             })
             .catch((error)=>{
                 console.error(error)

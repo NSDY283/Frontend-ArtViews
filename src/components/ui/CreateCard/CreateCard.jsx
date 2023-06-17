@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
+import swal from 'sweetalert'
 
 export const CreateCard = (props) => {
 
@@ -57,6 +58,14 @@ const onSubmit = async (e, id) => {
           setMessage("");
           setLoading(false);
       }, 1500);
+      swal({
+        title: "Producto Actualizado",
+        icon: "success",
+        timer: "2000"
+        // icon: "warning" error naranja
+        // icon: "info" error sin color 
+        // icon: "error" error con una x 
+      })
   } catch (error) {
       console.error(error);
       setMessage("Hubo un error");
@@ -65,16 +74,45 @@ const onSubmit = async (e, id) => {
           setMessage("");
           setLoading(false);
       }, 1500);
+      swal({
+        title: "No se Pudo Actualizar el Producto",
+        // icon: "success",
+        timer: "3000",
+        // icon: "warning" error naranja
+        icon: "error" 
+      })
   }
 };
 
-  const deleteProduct = async (id) => {
+  const deleteProduct = (id) => {
     try {
         console.log(id)
-        await axios.delete("https://backend-artviews.onrender.com/api/product/"+id);
-        window.location.reload(true);
+        swal({
+          title: `Desea Eliminar a ${props.name}?`,
+          icon: "info",
+          buttons: ["No", "Si"]
+        }).then( async result => {
+          if (result){
+            await axios.delete("https://backend-artviews.onrender.com/api/product/"+id);
+            swal({
+              title: "Se Elimino Correctamente",
+              timer: "2000",
+              icon: "success",
+              buttons: false
+            })
+            setTimeout(() => {
+              window.location.reload(true);
+          }, 1500);
+          }
+        })
     } catch (error) {
       console.log(error);
+      swal({
+        title: "No se Elimino el Producto",
+        icon: "success",
+        timer: "2000",
+        buttons: false
+    })
     }
   }
 

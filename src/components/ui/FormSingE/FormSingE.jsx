@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import {  useNavigate } from 'react-router-dom'
+import swal from 'sweetalert'
 
 export const FormSingE = () => {
     const [inputs, setInputs] = useState({
@@ -38,6 +39,14 @@ export const FormSingE = () => {
                     navigate('/login')
                     setLoading(false)
                 },1500)
+                swal({
+                    title: "Emprendimiento Registrado",
+                    icon: "success",
+                    timer: "2000"
+                    // icon: "warning" error naranja
+                    // icon: "info" error sin color 
+                    // icon: "error" error con una x 
+                })
             })
             .catch((error)=>{
                 console.error(error)

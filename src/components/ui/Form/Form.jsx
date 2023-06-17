@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import {  useNavigate } from 'react-router-dom'
+import swal from 'sweetalert'
 
 export const Form = () => {
     const [inputs, setInputs] = useState({
@@ -52,21 +53,48 @@ export const Form = () => {
                 localStorage.setItem("name",  JSON.stringify(response.data.name));
                 localStorage.setItem("idUser",  JSON.stringify(response.data._id));
                 navigate('/Welcome');
+                swal({
+                    title: "Inicio Exitoso",
+                    text: "Bienvenido "+response.data.name,
+                    icon: "success",
+                    timer: "2000"
+                    // icon: "warning" error naranja
+                    // icon: "info" error sin color 
+                    // icon: "error" error con una x 
+                })
             }else if (typerole === 'e') {
                 const responseE = await axios.post("https://backend-artviews.onrender.com/api/userE/loginE", Usuario)
                 localStorage.setItem("name",  JSON.stringify(responseE.data.name));
                 localStorage.setItem("email",  JSON.stringify(responseE.data.email));
                 navigate('/WelcomeEmp');
+                swal({
+                    title: "Inicio Exitoso",
+                    text: "Bienvenido "+responseE.data.name,
+                    icon: "success",
+                    timer: "2000"
+                    // icon: "warning" error naranja
+                    // icon: "info" error sin color 
+                    // icon: "error" error con una x 
+                })
             // }else if (typerole === 'b') {
             //     const responseE = await axios.post("http://localhost:5000/api/userE/loginE", Usuario)
             //     localStorage.setItem("name",  JSON.stringify(responseE.data.name));
             //     localStorage.setItem("email",  JSON.stringify(responseE.data.email));
             //     navigate('/WelcomeEmp');
             }else if (typerole === 'f') {
-                const responseE = await axios.post("https://backend-artviews.onrender.com/api/userE/loginAdministrator", Usuario)
-                localStorage.setItem("name",  JSON.stringify(responseE.data.name));
-                localStorage.setItem("email",  JSON.stringify(responseE.data.email));
+                const responseA = await axios.post("https://backend-artviews.onrender.com/api/userE/loginAdministrator", Usuario)
+                localStorage.setItem("name",  JSON.stringify(responseA.data.name));
+                localStorage.setItem("email",  JSON.stringify(responseA.data.email));
                 navigate('/WelcomeVenture');
+                swal({
+                    title: "Inicio Exitoso",
+                    text: "Bienvenido "+responseA.data.name,
+                    icon: "success",
+                    timer: "2000"
+                    // icon: "warning" error naranja
+                    // icon: "info" error sin color 
+                    // icon: "error" error con una x 
+                })
             }
 
         }catch (error) {

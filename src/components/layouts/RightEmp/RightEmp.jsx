@@ -1,12 +1,29 @@
 import React, { useState, useEffect} from 'react'
-import { useNavigate} from 'react-router';
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import swal from 'sweetalert'
 
 export const RightEmp = () => {
-  const navigate = useNavigate()
+  
 
   const name =  JSON.parse(localStorage.getItem("name"));
+
+  // const RoutePages = (to) => {
+  //     swal({
+  //       title: "Desea cerrar sesión",
+  //       icon: "success",
+  //       buttons: ["No","Si"]
+  //     }).then( async result => {
+  //       if (result){
+  //         swal({
+  //           title: "Se a cerrado sesión",
+  //           timer: "2000",
+  //           icon: "success",
+  //           buttons: false
+  //         })
+  //         return to = "/"
+  //       }
+  //     })
+  // }
 
   return (
     <div className='Right'>
@@ -21,7 +38,7 @@ export const RightEmp = () => {
               </a>
               <ul>
                 <li><Link className='anchorProfile' to="/MyProfileE">Mi Perfil</Link></li>
-                <li><Link className='anchorProfile' to="/">Cerrar Sesión</Link></li>
+                <li><Link className='anchorProfile' to="/" >Cerrar Sesión</Link></li>
               </ul>
               </li>
             </ul>       
