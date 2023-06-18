@@ -7,9 +7,8 @@ import { LeftE } from '../../layouts/LeftE/LeftE'
 import swal from 'sweetalert'
 
 export const ProductsEmp = () => {
-    // const email1 =  JSON.parse(localStorage.getItem("email"));
+    const email1 =  JSON.parse(localStorage.getItem("email"));
     const [inputs, setInputs] = useState({
-        // email: "",
         nameP: "",
         img: "",
         category: "",
@@ -19,6 +18,7 @@ export const ProductsEmp = () => {
         // nombreEmprendimiento: "",
         
     })
+    const [email, setEmail] = useState(email1)
     const [message, setMessage]=useState();
     const [loading, setLoading]=useState(false);
 
@@ -34,7 +34,7 @@ export const ProductsEmp = () => {
         e.preventDefault()
         // if (nameP !== '' && img !== '' && category !== '' && price !== '' && cant !== '' && description !== ''){
             const Product = {
-                // email,
+                email,
                 nameP,
                 img,
                 category,
@@ -49,7 +49,7 @@ export const ProductsEmp = () => {
             .post('https://backend-artviews.onrender.com/api/product/registerProduct', Product)
             .then (({data}) => {
                 setMessage(data.message);
-                // setInputs({email: `${email1}`,nameP: "",img: "",category: "",price: 0,cant: 0,description: "",});
+                // setInputs({email: email1,nameP: "",img: "",category: "",price: 0,cant: 0,description: "",});
                 setInputs({nameP: "",img: "",category: "",price: 0,cant: 0,description: "",});
                 setTimeout(()=>{
                     setMessage('')
