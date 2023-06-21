@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+    /* overflow-x: hidden; */
+}
+
+.contentp1Home{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22rem;
+    margin-top: 5rem;
+    overflow: hidden;
+}
+
+.p1Home{
+    width: 35%;
+    text-align: center;
+    font-size: 2.1rem;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+}
+
+.ContainerValues{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14rem;
+    overflow: hidden;
+}
+
+.img1CV{
+    width: 15%;
+    transition: .4s;
+    overflow: hidden;
+}
+
+.img2CV{
+    width: 17%;
+    transition: .4s;
+}
+
+.img1CV:hover{
+    transform: scale(1.1);
+}
+
+.img2CV:hover{
+    transform: scale(1.1);
+}
+
+.Container2Home{
+    width: 100vw;
+    height: 43rem;
+    margin-top: 14rem;
+    background-color: #E76F51;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ContainerTextHome{
+    width: 50%;
+    height: 100%;
+    color: #FFFFFF;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.ContainerTextHome > h2{
+    width: 70%;
+    text-align: right ;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.ContainerTextHome > p{
+    width: 65%;
+    text-align: right ;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.ContainerImghome{
+    width: 50%;
+    height: 100%;
+    color: #FFFFFF;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.imageBack{
+    height: 60%;
+    width: 50%;
+    margin-left: 5rem;
+    background: url(https://res.cloudinary.com/dwj1w03r9/image/upload/v1680125522/s2_t4bvn7.webp);
+}
+
+.ContainerPlane{
+    width: 100vw;
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    align-items: center;
+    gap: 3rem;
+    background: url(https://res.cloudinary.com/dwj1w03r9/image/upload/v1680126273/Bienvenido_Nuevamente_z6aoyf.jpg);
+    overflow: hidden;
+}
+
+.Plan1h{
+    width: 17%;
+    height: 46%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    transition: .4s;
+    box-shadow: 4px 4px 34px #00000041;
+}
+
+.Plan1h:hover{
+    transform: scale(1.06);
+}
+
+.Plan2h{
+    width: 17%;
+    height: 46%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    transition: .4s;
+    box-shadow: 4px 4px 34px #00000041;
+}
+
+.Plan2h:hover{
+    transform: scale(1.06);
+}
+
+.Plan3h{
+    width: 17%;
+    height: 46%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    transition: .4s;
+    box-shadow: 4px 4px 34px #00000041;
+}
+
+.Plan3h:hover{
+    transform: scale(1.06);
+}
+
+.titlePlanh{
+    width: 90%;
+    font-size: 25px;
+    margin: 20px;
+    font-weight: bold;
+    color: #E76F51;
+}
+
+.contPricePlanh{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    margin: 15px;
+}
+
+.signPlanh{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.pricePlan1h{
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.pricePlan2h{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.btnPlanh{
+    width: 65%;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #E76F51;
+    border: #E76F51;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 30px;
+    outline: none;
+}
+
+.containPlanh{
+    width: 90%;
+    font-size: 17px;
+}
+
+.anchorPlans{
+    width: 100%;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.footerHome{
+    width: 100vw;
+    height: 12rem;
+    border-top: solid 4px #c7c7c7;
+    overflow: hidden;
+}
