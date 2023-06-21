@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+.AboutUS {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.containerAboutUS{
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.headerAboutUs {
+    width: 100%;
+    height: 16vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.anchorAboutUs > img {
+    width: 9%;
+    margin-left: 4rem;
+    transition: .4s;
+}
+
+.anchorAboutUs > img:hover{
+    transform:scale(1.2)
+}
+
+.containerAboutUs {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    /* background-color: #ad4646; */
+}
+
+.logoAboutUs {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logoAboutUs > img {
+    width: 54%;
+}
+
+.infoAboutUs {
+    width: 55%;
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.infoAboutUs > h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.1rem;
+}
+
+.infoAboutUs > p{
+    width: 70%;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.containerMission{
+    width: 100%;
+    height: 36rem;
+    background-color: #E76F51;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.imgMission{
+    width: 50%;
+    height: 100%;
+    background: url(https://res.cloudinary.com/dwj1w03r9/image/upload/v1680112184/mantenimiento_qmftcm.png);
+    background-size: cover;
+    display: flex;
+}
+
+.mission{
+    width: 50%;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction: column;
+    color: #fff;
+}
+
+.mission>h2{
+    font-size: 2.8rem;
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+}
+
+.mission>p{
+    margin-left: 8rem;
+    font-size: 1.3rem;
+    width: 70%;
+}
+
+.containerVision{
+    width: 100%;
+    height: 36rem;
+    background-color: #E9C46A;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.imgVision{
+    width: 50%;
+    height: 100%;
+    background: url(https://res.cloudinary.com/dwj1w03r9/image/upload/v1680112179/360_F_442345248_r7JQR6K79E8f4zevIzdWYX9j2VRMOHD8_r1ltfj.jpg);
+    background-size: cover;
+    display: flex;
+}
+
+.vision{
+    width: 50%;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items:flex-end;
+    flex-direction: column;
+    color: #fff;
+}
+
+.vision>h2{
+    font-size: 2.8rem;
+    margin-right: 8rem;
+    margin-bottom: 1rem;
+}
+
+.vision>p{
+    margin-right: 8rem;
+    font-size: 1.3rem;
+    text-align: right;
+    width: 70%;
+}
+
+.containerObjective{
+    width: 100%;
+    height: 36rem;
+    background-color: #2A9D8F;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.imgObjective{
+    width: 50%;
+    height: 100%;
+    background: url(https://res.cloudinary.com/dwj1w03r9/image/upload/v1680112177/What_Is_the_Gift_Tax__Relax_You_Probably_Don_t_Owe_It_1_hybkyz.jpg);
+    background-size: cover;
+    display: flex;
+}
+
+.objective{
+    width: 50%;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction: column;
+    color: #fff;
+}
+
+.objective>h2{
+    font-size: 2.8rem;
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+}
+
+.objective>p{
+    margin-left: 8rem;
+    font-size: 1.3rem;
+    width: 70%;
+}
+
+.containerScope{
+    width: 100%;
+    height: 36rem;
+    background-color: #F4A261;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.imgScope{
+    width: 50%;
+    height: 100%;
+    background: url(https://res.cloudinary.com/dwj1w03r9/image/upload/v1680119769/Top_30_Recommended_Retail_Stores_For_Online_Sourcing_In_2023_qno0re.jpg);
+    background-size: cover;
+    display: flex;
+}
+
+.scope{
+    width: 50%;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items:flex-end;
+    flex-direction: column;
+    color: #fff;
+}
+
+.scope>h2{
+    font-size: 2.8rem;
+    margin-right: 8rem;
+    margin-bottom: 1rem;
+}
+
+.scope>p{
+    margin-right: 8rem;
+    font-size: 1.3rem;
+    text-align: right;
+    width: 70%;
+}
+
+.containerValuesAU{
+    width: 100%;
+    height: 60rem;
+    background-color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.titleValues{
+    font-size: 2rem;
+}
+
+.p1AU{
+    color: #E76F51;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: .4s;
+}
+
+.p1AU:hover{
+    transform: scale(1.1);
+}
+
+.p2AU{
+    color: #2A9D8F;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: .4s;
+    
+}
+
+.p2AU:hover{
+    transform: scale(1.1);
+}
+
+.p3AU{
+    color: #E9C46A;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: .4s;
+    
+}
+
+.p3AU:hover{
+    transform: scale(1.1);
+}
+
+.p4AU{
+    color: #F4A261;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: .4s;
+    
+}
+
+.p4AU:hover{
+    transform: scale(1.1);
+}
+
+.footerAU{
+    width: 100%;
+    height: 10rem;
+    border-top: solid 4px #c7c7c7;
+}
