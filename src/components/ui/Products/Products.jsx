@@ -3,7 +3,8 @@ import axios from 'axios'
 import { CreateCard } from '../CreateCard/CreateCard'
 
 export const Products = () => {
-
+  
+  // const idE =  JSON.parse(localStorage.getItem("idE"));
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -25,7 +26,9 @@ export const Products = () => {
   return (
     <div className='containerCreateCard'>
       {products.map((product) => {
-        return <CreateCard id={product._id} img={product.img} name={product.nameP} price={product.price} desciption={product.description} category={product.category} cant={product.cant}/>
-        })}
+        // if (idE === product.emprendimiento){
+          return <CreateCard id={product._id} img={product.img} name={product.nameP} price={product.price} desciption={product.description} category={product.category} cant={product.cant}/>
+        // }
+      })}
     </div>
   );}
