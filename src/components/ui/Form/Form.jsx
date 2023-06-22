@@ -75,6 +75,7 @@ export const Form = () => {
                 const responseE = await axios.post("https://backend-artviews.onrender.com/api/userE/loginE", Usuario)
                 localStorage.setItem("name",  JSON.stringify(responseE.data.name));
                 localStorage.setItem("email",  JSON.stringify(responseE.data.email));
+                localStorage.setItem("idE",  JSON.stringify(responseE.data._id));
                 navigate('/WelcomeEmp');
                 const Toast = swal.mixin({
                     toast: true,
