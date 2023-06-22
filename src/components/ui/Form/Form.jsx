@@ -12,6 +12,7 @@ export const Form = () => {
     });
 
     const [loading, setLoading]=useState(false);
+    const [error, setError]=useState("");
     
     const navigate = useNavigate();
 
@@ -44,6 +45,8 @@ export const Form = () => {
             email,
             password
         };
+        
+      setLoading(true);
 
         try {
             
@@ -53,6 +56,8 @@ export const Form = () => {
                 localStorage.setItem("name",  JSON.stringify(response.data.name));
                 localStorage.setItem("idUser",  JSON.stringify(response.data._id));
                 navigate('/Welcome');
+                setLoading(false);
+                setError("")
                 const Toast = swal.mixin({
                     toast: true,
                     position: 'top-end',
@@ -77,6 +82,8 @@ export const Form = () => {
                 localStorage.setItem("email",  JSON.stringify(responseE.data.email));
                 localStorage.setItem("idE",  JSON.stringify(responseE.data._id));
                 navigate('/WelcomeEmp');
+                setLoading(false);
+                setError("")
                 const Toast = swal.mixin({
                     toast: true,
                     position: 'top-end',
@@ -100,6 +107,8 @@ export const Form = () => {
                 localStorage.setItem("name",  JSON.stringify(responseA.data.name));
                 localStorage.setItem("email",  JSON.stringify(responseA.data.email));
                 navigate('/WelcomeVenture');
+                setLoading(false);
+                setError("")
                 const Toast = swal.mixin({
                     toast: true,
                     position: 'top-end',
@@ -121,6 +130,8 @@ export const Form = () => {
             }
 
         }catch (error) {
+            setError("Verifique su Contraseña o Correo")
+            setLoading(false);
             console.error(error)
         };
     };
@@ -136,6 +147,7 @@ return (
                     <Link to='/SingUP' className="anchorUP">Registrate</Link>
                 </p>
             </div>
+                <h2 className='errorCC'>{error}</h2>
 
             <input value={email} onChange={(e) => HandleChange(e)} placeholder='Correo' name='email' type='email' id='email' required />
             
