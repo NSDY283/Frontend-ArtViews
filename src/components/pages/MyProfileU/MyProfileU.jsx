@@ -9,69 +9,69 @@ import { Modal } from '../../ui/Modal/Modal'
 //Aqui deveria actualizar los usuarios 
 
 export const MyProfileU = () => {
-
+    
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
-    
-//   const id =  JSON.parse(localStorage.getItem("idUser"));
+    const [loading, setLoading]=useState(false);
 
-//     const [inputs, setInputs] = useState({
-//         // email: "",
-//         name: "",
-//         email: "",
-//         password: "",
-//     })
-
-//     const [message, setMessage]=useState();
-//     const [loading, setLoading]=useState(false);
-    
-    
-//     // const {email,nameP,img,category,price,cant,description}= inputs;
-//     const {name, email, password}= inputs;
-    
-//     const onChange = (e)=> {
-//         setInputs({ ...inputs, [e.target.name]: e.target.value})
-//     }
-    
-//     const onSubmit = async (e) => {
-//       e.preventDefault();
-    
-//       const UserE = {
-//           name, 
-//           email,
-//           password,
-//       };
-    
-//       console.log(UserE);
-//       setLoading(true);
-    
-//       try {
-//           const response = await axios.put(`http://localhost:5000/api/users/client/${id}`, UserE);
-//           setInputs({
-//               nameP: "",
-//               email: "",
-//               password: "",
-//           });
-    
-//           setTimeout(() => {
-//               setMessage("");
-//               setLoading(false);
-//               navigate('/LogIN')
-//           }, 1500);
-//       } catch (error) {
-//           console.error(error);
-//           setMessage("Hubo un error");
-    
-//           setTimeout(() => {
-//               setMessage("");
-//               setLoading(false);
-//           }, 1500);
-//       }
-//     };
-
-//     const navigate = useNavigate();
-
-    const name =  JSON.parse(localStorage.getItem("name"));
+    const name1 =  JSON.parse(localStorage.getItem("name"));
     const gmail =  JSON.parse(localStorage.getItem("email"));
+
+    const id =  JSON.parse(localStorage.getItem("idUser"));
+
+    const [inputs, setInputs] = useState({
+        // email: "",
+        name: "",
+        email: "",
+        password: "",
+    })
+
+    const [message, setMessage]=useState();
+    
+    
+    // const {email,nameP,img,category,price,cant,description}= inputs;
+    const {name, email, password}= inputs;
+    
+    const onChange = (e)=> {
+        setInputs({ ...inputs, [e.target.name]: e.target.value})
+    }
+    
+    const onSubmit = async (e) => {
+      e.preventDefault();
+      setLoading(true);
+    
+      const UserE = {
+          name, 
+          email,
+          password,
+      };
+    
+      console.log(UserE);
+    
+      try {
+          const response = await axios.put(`https://backend-artviews.onrender.com/api/users/client/${id}`, UserE);
+          setInputs({
+              nameP: "",
+              email: "",
+              password: "",
+          });
+    
+          setTimeout(() => {
+              setMessage("");
+              setLoading(false);
+              navigate('/LogIN')
+          }, 1500);
+      } catch (error) {
+          console.error(error);
+          setMessage("Hubo un error");
+    
+          setTimeout(() => {
+              setMessage("");
+              setLoading(false);
+          }, 1500);
+      }
+    };
+
+    const navigate = useNavigate();
 
   return (
     <div className="profileU">
@@ -81,7 +81,7 @@ export const MyProfileU = () => {
         </div>
         <div className="ContainerProfile2">
             <div className="container2-0">
-                <h1>{name}</h1>
+                <h1>{name1}</h1>
                 <p>{gmail}</p>
                 <p>18 Años</p>
 
@@ -94,20 +94,29 @@ export const MyProfileU = () => {
             </div>
         </div>
 
-        <Modal estado = {estadoModal1} cambiarEstado = {cambiarEstadoModal1}>
-        </Modal>
+        <div estado = {estadoModal1} cambiarEstado = {cambiarEstadoModal1}>
+        {estadoModal1 && 
+        <div className = "Overlay">
+            <div className="ContenedorModal">
+                <button className="BotonCerrar" onClick={() => cambiarEstadoModal1(false)}>
+                    X
+                </button>
+                <h1>Actualización de datos</h1>
 
-        {/* <h1>Al actualizar los datos se debe loguear de nuevo</h1>
-        <form action='' className="form2Sing" onSubmit={(e) => onSubmit(e)}>
+                <form action='' className="form2SingU" onSubmit={(e) => onSubmit(e)}>
 
-            <input onChange={(e) => onChange(e)} placeholder='Nombre de Usuario' name='name' type='text' id='nameUser' required />
-            <input onChange={(e) => onChange(e)} placeholder='Contraseña' name='password' type='password' id='password' required />
-            <input onChange={(e) => onChange(e)} placeholder='Correo' name='email' type='email' id='emailSing' required />
+                    <input onChange={(e) => onChange(e)} placeholder='Nombre de Usuario' name='name' type='text' id='nameUser1' required />
+                    <input onChange={(e) => onChange(e)} placeholder='Contraseña nueva' name='password' type='password' id='password1' required />
+                    <input onChange={(e) => onChange(e)} placeholder='Correo nuevo' name='email' type='email' id='emailSing1' required />
 
-            <div className="containerbuttonSing">
-                <button onSubmit={() => alert('funciona')}><span></span><p className="subPSing">{loading ? 'Cargando...' : 'Actualizar'}</p></button>
+                    
+                    <button className='btnAct2'onSubmit={() => alert('funciona')}><p className="subPSing">{loading ? 'Cargando...' : 'Actualizar'}</p></button>
+                    
+                </form>
             </div>
-        </form> */}
+        </div>
+    }
+    </div>
     </div>
   )
 }
